@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { ThemeProvider } from "@/components/theme-provider"
 import { Plus_Jakarta_Sans } from 'next/font/google'
+import AppBar from '@/components/AppBar'
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -31,7 +32,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <AppBar />
+          <main className="pt-16">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>
