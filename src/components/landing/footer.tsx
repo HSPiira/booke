@@ -1,15 +1,15 @@
+import Image from "next/image";
+
 export function Footer() {
     return (
-        <footer className="bg-gray-900 text-gray-300">
+        <footer className="bg-black text-gray-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-[1fr_0.7fr_0.7fr_1.6fr] gap-12">
                     {/* Company Info */}
                     <div className="space-y-4">
                         <div className="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                            </svg>
-                            <span className="text-xl font-bold text-white">HotelHub</span>
+                            <Image src="/favicon.svg" alt="HotelHub Logo" width={32} height={32} />
+                            <span className="text-xl font-bold text-white">Igwe Hotels</span>
                         </div>
                         <p className="text-sm leading-relaxed">
                             Your trusted partner in finding the perfect accommodation for your travels.
@@ -66,7 +66,7 @@ export function Footer() {
                                 <input
                                     type="email"
                                     placeholder="Enter your email"
-                                    className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400"
+                                    className="flex-1 w-120 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-white placeholder-gray-400"
                                 />
                                 <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                                     Subscribe
@@ -79,7 +79,7 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-sm text-gray-400">
-                        © 2024 HotelHub. All rights reserved.
+                        © {new Date().getFullYear()}  Igwe Hotels. All rights reserved.
                     </p>
                     <div className="flex gap-6">
                         <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Privacy Policy</a>

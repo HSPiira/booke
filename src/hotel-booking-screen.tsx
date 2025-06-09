@@ -79,7 +79,7 @@ export default function Component() {
         <Card className="overflow-hidden">
           <div className="relative">
             <Image
-              src="/placeholder.svg?height=200&width=400"
+              src="/hotel images/58 Sleek Modern Villa Designs to Inspire Your Next….jpeg"
               alt="Hotel Luxe Paris"
               width={400}
               height={200}
@@ -131,7 +131,7 @@ export default function Component() {
         <Card className="overflow-hidden">
           <div className="relative">
             <Image
-              src="/placeholder.svg?height=200&width=400"
+              src="/hotel images/Contemporary House with a View.jpeg"
               alt="Grand Hotel Seine"
               width={400}
               height={200}
@@ -186,7 +186,7 @@ export default function Component() {
         <Card className="overflow-hidden">
           <div className="relative">
             <Image
-              src="/placeholder.svg?height=200&width=400"
+              src="/hotel images/Modern houses in the Scottish Highlands.jpeg"
               alt="Boutique Montmartre"
               width={400}
               height={200}
