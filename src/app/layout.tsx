@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { ThemeProvider } from "@/components/theme-provider"
 import { Plus_Jakarta_Sans } from 'next/font/google'
-import AppBar from '@/components/AppBar'
+import AppBar from '@/components/app-bar'
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -25,6 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      </head>
       <body className={`${jakarta.variable} font-sans tracking-tight font-extralight text-black`}>
         <ThemeProvider
           attribute="class"
