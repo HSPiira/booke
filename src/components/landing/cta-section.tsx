@@ -1,51 +1,57 @@
+"use client";
+import Image from "next/image";
 import Link from "next/link";
 
 export function CTASection() {
     return (
-        <div className="relative py-32 overflow-hidden bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
-            {/* Background Elements */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.05),transparent_50%)] dark:bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.03),transparent_50%)]"></div>
+        <div className="relative py-20 bg-white dark:bg-black">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8">
+                    <div className="relative w-80 h-60 flex-shrink-0 flex items-center justify-center">
+                        <div className="absolute mt-20 left-0 w-72 h-56 overflow-hidden bg-yellow-400 shadow-lg z-0" />
+                        <div className="relative left-8 w-72 h-56 overflow-hidden shadow-xl z-10">
+                            <Image
+                                src="/hotel images/couch-pillows-yellow.jpeg"
+                                alt="Front image"
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                className="w-full h-full"
+                                priority
+                            />
+                        </div>
+                    </div>
 
-            {/* Decorative Elements */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-50 dark:bg-blue-900/30 rounded-full blur-3xl"></div>
-                <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-50 dark:bg-blue-900/30 rounded-full blur-3xl"></div>
-            </div>
-
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center max-w-3xl mx-auto">
-                    <span className="inline-block px-4 py-2 text-blue-600 dark:text-blue-400 text-sm font-medium mb-6">
-                        ✨ Join Our Community
-                    </span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-                        Ready to Experience
-                        <span className="block mt-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-400 dark:to-blue-300">
-                            Luxury Travel?
-                        </span>
-                    </h2>
-                    <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-                        Join thousands of satisfied travelers who have found their perfect accommodation with us. Start your journey today.
-                    </p>
-
-                    <div className="flex flex-row gap-6 justify-center items-center w-full mt-6">
+                    {/* Center: Main CTA */}
+                    <div className="w-full md:w-1/3 flex flex-col items-start justify-center text-left px-2">
+                        <h2 className="font-serif text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mb-4 leading-snug">
+                            Stay Longer, Save More
+                        </h2>
+                        <p className="text-gray-700 dark:text-gray-300 mb-6 text-base md:text-md">
+                            Visit Scottsdale for as long as you wish, the longer you stay, the more you save!
+                        </p>
                         <Link
-                            href="/hotels"
-                            className="group flex items-center gap-3 px-6 py-3 bg-blue-600 dark:bg-blue-500 text-white rounded-full font-bold text-base shadow-md hover:bg-blue-700 dark:hover:bg-blue-600 focus:bg-blue-800 dark:focus:bg-blue-700 focus:outline-none transition-all duration-200"
+                            href="/book"
+                            className="px-8 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-full font-bold text-lg shadow-lg flex items-center gap-3 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 dark:bg-white dark:text-black dark:hover:bg-gray-200"
                         >
-                            <span>Get Started Now</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            Book Now
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>
                         </Link>
-                        <Link
-                            href="/signin"
-                            className="group flex items-center gap-3 px-6 py-3 bg-white dark:bg-gray-900 text-blue-600 dark:text-blue-400 border-2 border-blue-600 dark:border-blue-400 rounded-full font-bold text-base shadow-md hover:bg-blue-50 dark:hover:bg-gray-800 hover:text-blue-700 dark:hover:text-blue-300 focus:bg-blue-100 dark:focus:bg-gray-800 focus:outline-none transition-all duration-200"
-                        >
-                            <span>Sign In</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                    </div>
+
+                    {/* Right: Icon and secondary text */}
+                    <div className="w-full md:w-1/3 flex flex-col items-center md:items-start justify-center text-center md:text-left px-2">
+                        <div className="mb-4 flex items-center justify-center md:justify-start">
+                            {/* Simple icon similar to image */}
+                            <svg width="56" height="40" viewBox="0 0 56 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-gray-800 dark:text-gray-200">
+                                <rect x="8" y="12" width="24" height="16" rx="2" stroke="currentColor" strokeDasharray="4 2" strokeWidth="2" />
+                                <rect x="24" y="4" width="24" height="16" rx="2" stroke="currentColor" strokeDasharray="4 2" strokeWidth="2" />
                             </svg>
-                        </Link>
+                        </div>
+                        <p className="text-gray-700 dark:text-gray-300 text-base md:text-md max-w-xs">
+                            Savor something tasty at The Canal Club restaurant, bar, or poolside. Or choose to relax in your room with In-Room Dining.
+                        </p>
                     </div>
                 </div>
             </div>

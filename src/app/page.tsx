@@ -4,10 +4,10 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <HeroSection />
-      <FeaturesSection />
       <CTASection />
-      <ReviewCarousel />
-      <TrustIndicators />
+      <FeaturesSection />
+      {/* <ReviewCarousel />
+      <TrustIndicators /> */}
       <Footer />
     </main>
   );
